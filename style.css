@@ -1,0 +1,526 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #151515;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    height: 80px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #777;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 90vh;
+
+    padding: 80px 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 80px;
+
+    background: #ffffff;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    font-size: 13px;
+    color: #777;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 110px);
+    line-height: 0.95;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #777;
+}
+
+.description {
+    max-width: 600px;
+
+    color: #666;
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background: #111;
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #444;
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo {
+    width: 330px;
+    height: 330px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 50%
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 110px 10%;
+}
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.section-title h2 {
+    font-size: 48px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1.5fr;
+
+    gap: 80px;
+}
+
+.about-content h3 {
+    font-size: 32px;
+}
+
+.about-content p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   DARK SECTION
+========================= */
+
+.dark {
+    background: #151515;
+    color: white;
+}
+
+.dark .section-title p {
+    color: #888;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    border: 1px solid #444;
+
+    padding: 35px;
+
+    min-height: 250px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #aaa;
+}
+
+.card span {
+    color: #888;
+}
+
+.card h3 {
+    font-size: 23px;
+    margin: 30px 0 15px;
+}
+
+.card p {
+    color: #aaa;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    max-width: 850px;
+}
+
+.skill {
+    margin-bottom: 30px;
+}
+
+.skill > div:first-child {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-size: 15px;
+}
+
+.skill > div:first-child span:last-child {
+    color: #888;
+}
+
+.progress {
+    height: 5px;
+
+    background: #ddd;
+}
+
+.progress div {
+    height: 100%;
+
+    background: #111;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-item {
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    gap: 50px;
+
+    max-width: 900px;
+}
+
+.year {
+    color: #aaa;
+
+    font-size: 20px;
+}
+
+.education-item h3 {
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+.education-item p {
+    color: #aaa;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   GOALS
+========================= */
+
+.goals {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.goal {
+    padding: 30px;
+
+    border: 1px solid #ddd;
+}
+
+.goal span {
+    color: #888;
+}
+
+.goal h3 {
+    margin: 25px 0 10px;
+
+    font-size: 24px;
+}
+
+.goal p {
+    color: #666;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    padding: 120px 10%;
+
+    background: #e8e8e8;
+
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 55px;
+
+    margin-bottom: 20px;
+}
+
+.contact > p:not(.subtitle) {
+    color: #666;
+
+    margin-bottom: 35px;
+}
+
+.socials {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.socials a {
+    padding: 12px 25px;
+
+    border: 1px solid #222;
+
+    text-decoration: none;
+
+    color: #222;
+
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    background: #111;
+    color: white;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 10%;
+
+    background: #111;
+
+    color: #777;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .header {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    nav {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+
+    .hero {
+        padding: 70px 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .photo-placeholder {
+        width: 280px;
+        height: 350px;
+    }
+
+
+    .section {
+        padding: 80px 25px;
+    }
+
+    .section-title h2 {
+        font-size: 38px;
+    }
+
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .goals {
+        grid-template-columns: 1fr;
+    }
+
+
+    .education-item {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .contact {
+        padding: 80px 25px;
+    }
+
+    .contact h2 {
+        font-size: 40px;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 25px;
+    }
+}
